@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Anton";
+  src: url("fonts/Anton-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url("fonts/Pacifico-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0d0a14;
+  color: #f5efe6;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 22px;
+  background: linear-gradient(90deg, #ff5e3a, #ff2e88 55%, #7b2ff7);
+}
+.brand-mark {
+  background: #0d0a14;
+  color: #ffd166;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 2px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.brand-name {
+  font-family: "Anton", sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.tagline { margin: 0; opacity: 0.9; font-size: 14px; }
+.studio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+  padding: 20px 22px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.preview-wrap { min-width: 0; }
+#stage {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #1a1426;
+  border: 3px solid #ffd166;
+  border-radius: 6px;
+}
+.hint { color: #b9aed0; font-size: 13px; }
+.controls { display: flex; flex-direction: column; gap: 14px; }
+.group {
+  background: #1a1426;
+  border: 1px solid #3a2d55;
+  border-radius: 8px;
+  padding: 12px;
+}
+.group h2 {
+  margin: 0 0 8px;
+  font-family: "Anton", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffd166;
+}
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+button, .upload {
+  background: #2b2140;
+  color: #f5efe6;
+  border: 1px solid #5b4a86;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button.active { background: #ff2e88; border-color: #ff2e88; }
+button.primary { background: #ff5e3a; border-color: #ff5e3a; font-weight: 700; }
+button:disabled { opacity: 0.4; cursor: default; }
+label { display: block; margin: 8px 0; font-size: 14px; }
+input[type="text"] {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #5b4a86;
+  background: #0d0a14;
+  color: #f5efe6;
+}
+input[type="range"] { width: 100%; }
+.strip { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.strip img {
+  width: 56px; height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.strip img.selected { border-color: #ffd166; }
+.note { color: #b9aed0; font-size: 12px; }
